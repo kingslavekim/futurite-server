@@ -1,0 +1,15 @@
+{
+  "env": "development",
+
+  "secretKey": "secretKey",
+  "log": {
+    "format": "dev",
+    "dir": "../logs"
+  },
+  "cors": {
+    "origin": true,
+    "credentials": true
+  },
+
+  //"MONGO_DB_URL": "mongodb://ddocs:Ddocs12@172.16.10.99:27017/ddocs",
+}
