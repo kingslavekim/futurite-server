@@ -11,5 +11,5 @@
     "credentials": true
   },
 
-  //"MONGO_DB_URL": "mongodb://ddocs:Ddocs12@172.16.10.99:27017/ddocs",
+  "MONGO_DB_URL": "mongodb://sisanri:Sisanri12@43.200.72.172:27017/sisanri"
 }

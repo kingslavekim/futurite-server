@@ -1,12 +1,12 @@
-import noticesModel from '@models/notices.model';
+import noticeModel from '@models/notice.model';
 
 class NoticeService {
-  public notices = noticesModel;
+  public notice = noticeModel;
 
   public async getNoticeCount(): Promise<any> {
     let getData: any = 0;
 
-    getData = await this.notices
+    getData = await this.notice
         .find({})
         .countDocuments();
 
@@ -17,7 +17,7 @@ class NoticeService {
     const resultData = [];
     let dataList: any;
 
-    dataList = await this.notices .find({}) .sort({createdAt:-1}) .limit(size.end) .skip(size.start);
+    dataList = await this.notice.find({}).sort({createdAt:-1}).limit(size);
 
     for (const data of dataList) {
       resultData.push(data._doc);
@@ -31,7 +31,7 @@ class NoticeService {
     let dataList: any;
     let rowCount = 5;
 
-    dataList = await this.notices .find({}).sort({createdAt:-1}).limit(size.end);
+    dataList = await this.notice.find({}).sort({createdAt:-1}).limit(size.end);
 
     for (const data of dataList) {
       resultData.push(data._doc);
@@ -52,7 +52,7 @@ class NoticeService {
     const resultObject: any = {};
     let dataList: any;
 
-    dataList = await this.notices.findOne({ no: Number(no) });
+    dataList = await this.notice.findOne({ no: Number(no) });
     resultObject._id = dataList._doc._id.toString();
     resultObject.no = dataList._doc.no;
     resultObject.title = dataList._doc.title;
@@ -63,7 +63,7 @@ class NoticeService {
   }
 
   public async getNoticeDelete(no: string): Promise<any> {
-    await this.notices.deleteOne({ no: Number(no) });
+    await this.notice.deleteOne({ no: Number(no) });
   }
 }
 

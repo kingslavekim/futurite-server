@@ -2,7 +2,7 @@
     "env": "production",
     "dbConfig": {
         "host": "172.16.10.99",
-        "database": "ddocs",
+        "database": "futurite",
         "port": 27017
     },
     "secretKey": "secretKey",

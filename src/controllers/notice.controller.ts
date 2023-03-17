@@ -30,19 +30,6 @@ class noticeController {
     }
   };
 
-  public getMainNoticeList = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      let data: any;
-
-      data = await this.NoticeService.getMainNoticeList(JSON.parse(req.query.size.toString()));
-
-      res.setHeader('getMainNoticeList', '');
-      res.status(200).json({ data: data, message: 'getMainNoticeList' });
-    } catch (error) {
-      next(error);
-    }
-  };
-
   public getNoticeObject = async (req: Request, res: Response, next: NextFunction) => {
     try {
       let data: any;

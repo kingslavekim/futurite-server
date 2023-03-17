@@ -14,7 +14,6 @@ class NoticeRoute implements Routes {
   private initializeRoutes() {
     this.router.get(`${this.path}getNoticeCount`, this.noticeController.getNoticeCount);
     this.router.get(`${this.path}getNoticeList`, this.noticeController.getNoticeList);
-    this.router.get(`${this.path}getMainNoticeList`, this.noticeController.getMainNoticeList);
     this.router.get(`${this.path}getNoticeObject`, this.noticeController.getNoticeObject);
     this.router.get(`${this.path}getNoticeDelete`, this.noticeController.getNoticeDelete);
   }
